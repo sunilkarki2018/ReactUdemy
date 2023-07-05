@@ -1,41 +1,31 @@
 import { NavLink } from "react-router-dom";
 
-import classes from "./MainNavigation.module.css";
+import classes from "./EventsNavigation.module.css";
 
-function MainNavigation() {
+function MembersNavigation() {
   return (
     <header className={classes.header}>
       <nav>
         <ul className={classes.list}>
           <li>
             <NavLink
-              to="/"
+              to="/members"
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
               end
             >
-              Home
+              All Members
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/events"
+              to="/members/new"
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
             >
-              Events
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/members"
-              className={({ isActive }) =>
-                isActive ? classes.active : undefined
-              }
-            >
-              Members
+              New Member
             </NavLink>
           </li>
         </ul>
@@ -44,4 +34,4 @@ function MainNavigation() {
   );
 }
 
-export default MainNavigation;
+export default MembersNavigation;
